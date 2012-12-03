@@ -1,0 +1,31 @@
+{
+  "author": "Uber <erik@uber.com> (http://github.com/uber)",
+  "name": "coffee-middleware",
+  "description": "coffee-script middleware for connect.",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/uber/coffee-middleware.git"
+  },
+  "main": "lib/middleware.js",
+  "dependencies": {
+    "coffee-script": ">= 1.4.0",
+    "mkdirp": ">= 0.3.1"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "dist": {
+    "shasum": "fe2fac10935193ea6709d15633717720d759df09"
+  },
+  "_from": "less-middleware@0.1.8",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "BSD"
+}
