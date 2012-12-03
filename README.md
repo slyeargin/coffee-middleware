@@ -90,7 +90,7 @@ Requests for static assets (like javascripts) made to the express server use a `
 
 The middleware uses that path to determine where to look for coffee-script files. In the original example it looks for the `.coffee` file at `/public/js/main.coffee` and compiles it to `/public/js/main.js`.
 
-If you are using a different `src` and `dest` options it causes for more complex directories structures unless you use the `prefix` option. For example, without the `prefix`, and with a `src` of `/src/coffee` and a `dest` of `/public` it would look for the less file at `/src/coffee/js/main.coffee` and compile it to `/public/js/main.js`. To make it cleaner you can use the `prefix` option:
+If you are using a different `src` and `dest` options it causes for more complex directories structures unless you use the `prefix` option. For example, without the `prefix`, and with a `src` of `/src/coffee` and a `dest` of `/public` it would look for the `.coffee` file at `/src/coffee/js/main.coffee` and compile it to `/public/js/main.js`. To make it cleaner you can use the `prefix` option:
 
     var coffeeMiddleware = require('coffee-middleware');
 
@@ -109,4 +109,4 @@ If you are using a different `src` and `dest` options it causes for more complex
         app.use(express.static(__dirname + '/public'));
     });
 
-Using the `prefix` it changes the `pathname` from `/js/main.js` to `/main.coffee`. With that prefix removed from the `pathname` it makes things cleaner. With the `prefix` removed it would look for the less file at `/src/coffee/main.coffee` and compile it to `/public/js/main.js`.
+Using the `prefix` it changes the `pathname` from `/js/main.js` to `/main.coffee`. With that prefix removed from the `pathname` it makes things cleaner. With the `prefix` removed it would look for the `.coffee` file at `/src/coffee/main.coffee` and compile it to `/public/js/main.js`.
