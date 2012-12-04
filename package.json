@@ -20,12 +20,17 @@
   "dist": {
     "shasum": "fe2fac10935193ea6709d15633717720d759df09"
   },
-  "_from": "less-middleware@0.1.8",
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "license": "BSD"
+  "license": "MIT",
+  "keywords": [
+    "coffee-script",
+    "middleware",
+    "express",
+    "connect"
+  ]
 }

@@ -43,11 +43,6 @@
             <td>Path which should be stripped from the public <code>pathname</code>.</td>
             <td></td>
         </tr>
-        <tr>
-            <th><code>compress</code></th>
-            <td>Compress the output being written to the <code>*.js</code> files. When set to <code>'auto'</code> compression will only happen when the js file ends with <code>.min.js</code> or <code>-min.js</code>.</td>
-            <td><code>auto</code></td>
-        </tr>
     </tbody>
 </table>
 
