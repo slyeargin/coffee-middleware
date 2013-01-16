@@ -1,3 +1,7 @@
+## YO!
+This is adapted from the [less middleware](https://npmjs.org/package/less-middleware) written by [zoramite](https://npmjs.org/~zoramite)
+I have simply gone through and replaced anything that is less specific and replaced it with the coffee-script equivalent.
+
 ## Installation
 
     sudo npm install coffee-middleware
