@@ -1,10 +1,10 @@
 ## YO!
 This is adapted from the [less middleware](https://npmjs.org/package/less-middleware) written by [zoramite](https://npmjs.org/~zoramite)
-I have simply gone through and replaced anything that is less specific and replaced it with the coffee-script equivalent.
+We have removed LESS specific, replaced it with the coffee-script equivalent, removed dependance on static files, and added inline sourcemaps.
 
 ## Installation
 
-    sudo npm install coffee-middleware
+    npm install coffee-middleware
 
 ## Options
 
@@ -38,11 +38,6 @@ I have simply gone through and replaced anything that is less specific and repla
             <td></td>
         </tr>
         <tr>
-            <th><code>dest</code></th>
-            <td>Desitnation directory to output the compiled <code>.js</code> files.</td>
-            <td><code>&lt;src&gt;</code></td>
-        </tr>
-        <tr>
             <th><code>prefix</code></th>
             <td>Path which should be stripped from the public <code>pathname</code>.</td>
             <td></td>
@@ -61,7 +56,6 @@ I have simply gone through and replaced anything that is less specific and repla
             src: __dirname + '/public',
             compress: true
         }),
-        connect.staticProvider(__dirname + '/public')
     );
 
 ### Express
@@ -77,35 +71,4 @@ I have simply gone through and replaced anything that is less specific and repla
             src: __dirname + '/public',
             compress: true
         }));
-
-        app.use(express.static(__dirname + '/public'));
     });
-
-### Express - Different `src` and `dest`
-
-When using a different `src` and `dest` you can use the `prefix` option to make the directory structure cleaner.
-
-Requests for static assets (like javascripts) made to the express server use a `pathname` to look up the file. So if the request is for `http://localhost/js/main.js` the `pathname` will be `/js/main.js`.
-
-The middleware uses that path to determine where to look for coffee-script files. In the original example it looks for the `.coffee` file at `/public/js/main.coffee` and compiles it to `/public/js/main.js`.
-
-If you are using a different `src` and `dest` options it causes for more complex directories structures unless you use the `prefix` option. For example, without the `prefix`, and with a `src` of `/src/coffee` and a `dest` of `/public` it would look for the `.coffee` file at `/src/coffee/js/main.coffee` and compile it to `/public/js/main.js`. To make it cleaner you can use the `prefix` option:
-
-    var coffeeMiddleware = require('coffee-middleware');
-
-    var app = express.createServer();
-
-    app.configure(function () {
-        // Other configuration here...
-
-        app.use(coffeeMiddleware({
-            dest: __dirname + '/public/js',
-            src: __dirname + '/src/coffee',
-            prefix: '/js',
-            compress: true
-        }));
-
-        app.use(express.static(__dirname + '/public'));
-    });
-
-Using the `prefix` it changes the `pathname` from `/js/main.js` to `/main.coffee`. With that prefix removed from the `pathname` it makes things cleaner. With the `prefix` removed it would look for the `.coffee` file at `/src/coffee/main.coffee` and compile it to `/public/js/main.js`.
