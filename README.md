@@ -33,6 +33,11 @@ We have removed LESS specific, replaced it with the coffee-script equivalent, re
             <td><code>false</code></td>
         </tr>
         <tr>
+            <th><code>bare</code></th>
+            <td>Compile the JavaScript without the top-level function safety wrapper.</td>
+            <td><code>false</code></td>
+        </tr>
+        <tr>
             <th><code>src</code></th>
             <td>Source directory containing the <code>.coffee</code> files. <strong>Required.</strong></td>
             <td></td>
