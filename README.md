@@ -43,6 +43,11 @@ We have removed LESS specific, replaced it with the coffee-script equivalent, re
             <td></td>
         </tr>
         <tr>
+            <th><code>encodeSrc</code></th>
+            <td>Encode CoffeeScript source file as base64 comment in compiled JavaScript</td>
+            <td><code>true</code></td>
+        </tr>
+        <tr>
             <th><code>prefix</code></th>
             <td>Path which should be stripped from the public <code>pathname</code>.</td>
             <td></td>
