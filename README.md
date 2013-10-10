@@ -1,4 +1,6 @@
 ## YO!
+[![NPM version](https://badge.fury.io/js/coffee-middleware.png)](http://badge.fury.io/js/coffee-middleware)
+
 This is adapted from the [less middleware](https://npmjs.org/package/less-middleware) written by [zoramite](https://npmjs.org/~zoramite)
 We have removed LESS specific, replaced it with the coffee-script equivalent, removed dependance on static files, and added inline sourcemaps.
 
