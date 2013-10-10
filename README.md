@@ -61,26 +61,30 @@ We have removed LESS specific, replaced it with the coffee-script equivalent, re
 
 ### Connect
 
-    var coffeeMiddleware = require('coffee-middleware');
+```javascript
+var coffeeMiddleware = require('coffee-middleware');
 
-    var server = connect.createServer(
-        coffeeMiddleware({
-            src: __dirname + '/public',
-            compress: true
-        }),
-    );
+var server = connect.createServer(
+  coffeeMiddleware({
+    src: __dirname + '/public',
+    compress: true
+  }),
+);
+```
 
 ### Express
 
-    var coffeeMiddleware = require('coffee-middleware');
+```javascript
+var coffeeMiddleware = require('coffee-middleware');
 
-    var app = express.createServer();
+var app = express.createServer();
 
-    app.configure(function () {
-        // Other configuration here...
+app.configure(function () {
+  // Other configuration here...
 
-        app.use(coffeeMiddleware({
-            src: __dirname + '/public',
-            compress: true
-        }));
-    });
+  app.use(coffeeMiddleware({
+    src: __dirname + '/public',
+    compress: true
+  }));
+});
+```
