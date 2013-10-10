@@ -2,7 +2,7 @@
   "author": "Uber <erik@uber.com> (http://github.com/uber)",
   "name": "coffee-middleware",
   "description": "coffee-script middleware for connect.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "repository": {
     "type": "git",
     "url": "git://github.com/uber/coffee-middleware.git"
